@@ -5,6 +5,7 @@ This is my commons library for all of my personal C# projects.
 ## Index
 
 - [Standard Input / Output](/CommonsLibrary/StdInp.cs)
+- [Logging](/CommonsLibrary/Logging.cs)
 
 ## Contributors
 - [Alex O'Brien](https://github.com/alex8obrien)
