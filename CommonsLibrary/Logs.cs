@@ -29,5 +29,28 @@ namespace CommonsLibrary
             sb.AppendLine($"{logMessage}");
             txtWriter.WriteLine(sb.ToString());
         }
+
+        public static string LogBuilder(Exception e, string indent = "")
+        {
+            StringBuilder sb = new StringBuilder();
+
+            if (indent.Length > 0)
+            {
+                sb.AppendFormat($"{indent}Inner ");
+            }
+
+            sb.AppendFormat($"Exception Found:\n{indent}Type: {e.GetType().FullName}");
+            sb.AppendFormat($"\n{indent}Message: {e.Message}");
+            sb.AppendFormat($"\n{indent}Source: {e.Source}");
+            sb.AppendFormat($"\n{indent}Stacktrace: {e.StackTrace}");
+
+            if (e.InnerException != null)
+            {
+                sb.Append("\n");
+                LogBuilder(sb, e.InnerException, indent + "  ");
+            }
+
+            return sb.ToString();
+        }
     }
 }
