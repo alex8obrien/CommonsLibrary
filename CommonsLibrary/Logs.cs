@@ -21,9 +21,9 @@ namespace CommonsLibrary
                     fs.Close();
                 }
             }
-            catch (IOException)
+            catch (IOException e)
             {
-                Console.WriteLine("Bruh even logging failed");
+                Console.WriteLine(e);
             }
     
             using StreamWriter writer = File.AppendText(pathString + @"\Logs\log.txt");

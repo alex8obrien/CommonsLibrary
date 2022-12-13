@@ -5,9 +5,10 @@ This is my commons library for all of my personal C# projects.
 ## Index
 
 - [Standard Input / Output](/CommonsLibrary/StdInp.cs)
-- [Logging](/CommonsLibrary/Logging.cs)
+- [Logging](/CommonsLibrary/Logs.cs)
 
 ## Contributors
 - [Alex O'Brien](https://github.com/alex8obrien)
 
 ### *Licensed under the DBAD (dont be a dick) License, Find it [here](/LICENSE.md)*
+Updared
