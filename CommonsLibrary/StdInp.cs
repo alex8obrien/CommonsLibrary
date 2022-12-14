@@ -46,8 +46,17 @@
         /// <returns>The bool input by the user</returns>
         public static bool InputYNAsBool(string msg)
         {
-            string inp = Input($"{msg} (y/n)").ToUpper();
-            return inp.Equals("Y");
+            string inp = string.Empty;
+
+            do
+            {
+                inp = Input($"{msg} (y/n)").ToUpper();
+            } while (inp != "Y" && inp != "N");
+
+            if (inp == "Y")
+            { return true; }
+            else
+            { return false; }
         }
     }
 }
