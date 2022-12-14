@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Reflection;
 using System.Text;
 
@@ -7,7 +8,7 @@ namespace CommonsLibrary
     public class Logs
     {
         /// <summary>This method will create a log file if it doesn't exist and then it will write the log to the file.
-        ///It can also be called manually to write a custom log to the log file</summary>
+        /// It can also be called manually to write a custom log to the log file</summary>
         /// <param name="logMessage">The message that will be written to the log</param>
         public static void LogWrite(string logMessage)
         {
