@@ -51,12 +51,20 @@
             do
             {
                 inp = Input($"{msg} (y/n)").ToUpper();
-            } while (inp != "Y" && inp != "N");
 
-            if (inp == "Y")
-            { return true; }
-            else
-            { return false; }
+            } while (inp != "Y" || inp != "N" || inp != "YES" || inp != "NO");
+
+            switch (inp)
+            {
+                case "Y":
+                case "YES":
+                    return true;
+                case "N":
+                case "NO":
+                    return false;
+                default:
+                    return false;
+            }
         }
     }
 }
