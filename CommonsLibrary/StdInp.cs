@@ -1,8 +1,8 @@
-﻿namespace StdInp
+﻿namespace Lib
 {
-    public class StdInp
+    public static class StdInp
     {
-        /// <summary>This method can be used to retrive a string input from the console</summary>
+        /// <summary>This method can be used to retrieve a string input from the console</summary>
         /// <param name="msg">The message to be displayed to the user</param>
         /// <returns>The string input by the user</returns>
         public static string Input(string msg)
@@ -11,7 +11,7 @@
             return Console.ReadLine() ?? string.Empty;
         }
 
-        /// <summary>This method can be used to retrive an integer based input from the console that is between a range of values</summary>
+        /// <summary>This method can be used to retrieve an integer based input from the console that is between a range of values</summary>
         /// <param name="msg">The message to be displayed to the user</param>
         /// <param name="lowerBound">The lower bound of the range</param>
         /// <param name="upperBound">The upper bound of the range</param>
@@ -27,7 +27,7 @@
             return output;
         }
 
-        /// <summary>This method can be used to retrive an integer based input from the console</summary>
+        /// <summary>This method can be used to retrieve an integer based input from the console</summary>
         /// <param name="msg">The message to be displayed to the user</param>
         /// <returns>The integer input by the user</returns>
         public static int InputInt(string msg)
@@ -41,18 +41,17 @@
             return output;
         }
 
-        /// <summary>This method can be used to retrive a bool input from the console from Yes or No</summary>
+        /// <summary>This method can be used to retrieve a bool input from the console from Yes or No</summary>
         /// <param name="msg">The message to be displayed to the user</param>
         /// <returns>The bool input by the user</returns>
         public static bool InputYNAsBool(string msg)
         {
-            string inp = string.Empty;
+            string inp;
 
             do
             {
                 inp = Input($"{msg} (y/n)").ToUpper();
-
-            } while (inp != "Y" || inp != "N" || inp != "YES" || inp != "NO");
+            } while (inp != "Y" && inp != "N" && inp != "YES" && inp != "NO");
 
             switch (inp)
             {
