@@ -44,6 +44,7 @@
         /// <summary>This method can be used to retrieve a bool input from the console from Yes or No</summary>
         /// <param name="msg">The message to be displayed to the user</param>
         /// <returns>The bool input by the user</returns>
+        // ReSharper disable once InconsistentNaming
         public static bool InputYNAsBool(string msg)
         {
             string inp;
