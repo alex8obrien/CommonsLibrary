@@ -1,4 +1,4 @@
-﻿namespace Lib
+﻿namespace CommonsLibrary
 {
     public static class StdInp
     {
