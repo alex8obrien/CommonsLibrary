@@ -16,7 +16,7 @@ namespace CommonsLibrary
             return count;
         }
 
-        /// <summary>It returns a string of a specific line in a file</summary>
+        /// <summary>It returns a string of a specific line in a file from a 0 based index</summary>
         /// <param name="filePath">It's the path of the file from the solution folder including the file extension</param>
         /// <param name="lineNumber">The specific line you want returned</param>
         /// <returns>A line in a file as a string</returns>
