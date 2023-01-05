@@ -5,7 +5,7 @@
     <ImplicitUsings>disable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <Title>C# Commons Library</Title>
-    <Version>2.1.0</Version>
+    <Version>2.2.0</Version>
     <Authors>Alex O'Brien</Authors>
     <PackageProjectUrl>https://github.com/alex8obrien/CommonsLibrary</PackageProjectUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
@@ -14,6 +14,8 @@
     <RepositoryUrl>https://github.com/alex8obrien/CommonsLibrary</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>lib;library;c#</PackageTags>
+    <PackageId>Alex.CommonsLibrary</PackageId>
+	<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
