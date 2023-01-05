@@ -1,11 +1,11 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>disable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <Title>C# Commons Library</Title>
-    <Version>2.2.0</Version>
+    <Version>2.2.1</Version>
     <Authors>Alex O'Brien</Authors>
     <PackageProjectUrl>https://github.com/alex8obrien/CommonsLibrary</PackageProjectUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
@@ -16,9 +16,14 @@
     <PackageTags>lib;library;c#</PackageTags>
     <PackageId>Alex.CommonsLibrary</PackageId>
 	<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	<PackageLicenseFile>LICENSE.md</PackageLicenseFile>
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="..\LICENSE.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
     <None Include="..\README.md">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
