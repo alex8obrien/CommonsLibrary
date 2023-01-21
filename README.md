@@ -4,12 +4,12 @@ This is my commons library for all of my personal C# projects.
 
 ## Index
 
-- [Standard Input](/CommonsLibrary/StdInp.cs)
-- [Standard Output](/CommonsLibrary/StdOut.cs)
-- [Logging](/CommonsLibrary/Logs.cs)
-- [File Input/Output](/CommonsLibrary/FileIO.cs)
+- [Standard Input](https://github.com/alex8obrien/CommonsLibrary/blob/master/CommonsLibrary/StdInp.cs)
+- [Standard Output](https://github.com/alex8obrien/CommonsLibrary/blob/master/CommonsLibrary/StdOut.cs)
+- [Logging](https://github.com/alex8obrien/CommonsLibrary/blob/master/CommonsLibrary/Logs.cs)
+- [File Input/Output](https://github.com/alex8obrien/CommonsLibrary/blob/master/CommonsLibrary/FileIO.cs)
 
 ## Contributors
 - [Alex O'Brien](https://github.com/alex8obrien)
 
-### *Licensed under the MIT License, Find it [here](/LICENSE.md)*
+### *Licensed under the MIT License, Find it [here](https://github.com/alex8obrien/CommonsLibrary/blob/master/LICENSE.md)*
