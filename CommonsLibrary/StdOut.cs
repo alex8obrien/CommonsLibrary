@@ -148,12 +148,12 @@ namespace CommonsLibrary
                     {
                         int numberOfSpaces = maxWidth[j] - data[i, j].Length;
 
-                        for (int k = 0; k < numberOfSpaces / 2; k++)
+                        for (int k = 0; k <= numberOfSpaces / 2; k++)
                         { Console.Write(" "); }
 
                         Console.Write(data[i, j]);
 
-                        for (int k = 0; k < numberOfSpaces / 2; k++)
+                        for (int k = 0; k <= numberOfSpaces / 2; k++)
                         { Console.Write(" "); }
                     }
                     else
@@ -175,4 +175,5 @@ namespace CommonsLibrary
             }
         }
     }
+}
 }
