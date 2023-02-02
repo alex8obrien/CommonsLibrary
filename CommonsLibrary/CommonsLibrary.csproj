@@ -5,7 +5,7 @@
     <ImplicitUsings>disable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <Title>C# Commons Library</Title>
-    <Version>3.0.1</Version>
+    <Version>3.0.2</Version>
     <Authors>Alex O'Brien</Authors>
     <PackageProjectUrl>https://github.com/alex8obrien/CommonsLibrary</PackageProjectUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
