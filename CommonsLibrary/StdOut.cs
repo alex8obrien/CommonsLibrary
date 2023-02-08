@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace CommonsLibrary
 {
-    internal class StdOut
+    public static class StdOut
     {
         /// <summary>
         /// Creates a table from Headers and Data in Array format
