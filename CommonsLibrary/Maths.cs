@@ -5,11 +5,12 @@ namespace CommonsLibrary
 {
     public static class Maths
     {
-        /// <summary>
-        /// This method checks if the number is prime or not
-        /// </summary>
+        /// <summary>Checks if the number is prime or not.</summary>
         /// <param name="number">Any positive integer with a value greater than 0</param>
-        /// <returns>A boolean based on if the number is prime or not</returns>
+        /// <returns>A boolean based on if the number is prime or not.</returns>
+        /// <exception cref="System.ArgumentException">A non-integer based value has been entered.</exception>
+        /// <exception cref="System.ArgumentNullException">
+        /// <paramref name="number" /> is <see langword="null" />.</exception>
         public static bool IsPrime(int number)
         {
             switch (number)
@@ -34,13 +35,16 @@ namespace CommonsLibrary
             return true;
         }
 
-        /// <summary>
-        /// This method returns all of the divisors of a number
-        /// </summary>
-        /// <param name="number">The number that you want to check</param>
-        /// <returns>Every divisor of the number</returns>
+        /// <summary>Returns all of the divisors of a number.</summary>
+        /// <param name="number">The number that you want to check.</param>
+        /// <returns>Every divisor of the number.</returns>
+        /// <Exception cref="ArgumentNullException">
+        /// <paramref name="number" /> is <see langword="null" />.</exception>
         public static IEnumerable<int> GetDivisors(int number)
         {
+            if (number < 0) number = -number;
+            if (number == 0) yield return 0;
+
             for (int i = 1; i * i <= number; i++)
             {
                 if (number % i != 0) continue;
@@ -51,15 +55,15 @@ namespace CommonsLibrary
             }
         }
 
-        /// <summary>
-        /// This method returns all of the prime factors of a given number
-        /// </summary>
+        /// <summary>Returns all of the prime factors of a given number.</summary>
         /// <param name="number">This is the signed integer that you want the prime factors of</param>
         /// <returns>An array of the prime factors</returns>
+        /// <exception cref="ArgumentNullException">
+        /// <paramref name="number" /> is <see langword="null" />.</exception>
         public static int[] GetPrimeFactors(int number)
         {
             List<int> factors = new();
-            if (number < 0) number *= -1;
+            if (number < 0) number = -number;
 
             while (number % 2 == 0)
             {
