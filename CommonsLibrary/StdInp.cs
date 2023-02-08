@@ -25,7 +25,7 @@ namespace CommonsLibrary
             do
             {
                 isInt = int.TryParse(Input($"{msg} ({lowerBound}-{upperBound}) "), out output);
-            } while (!isInt && !(lowerBound <= output && output <= upperBound));
+            } while (!isInt || output < lowerBound || upperBound < output);
             return output;
         }
 
