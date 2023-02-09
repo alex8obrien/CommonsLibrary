@@ -5,7 +5,7 @@ using System.Text;
 
 namespace CommonsLibrary
 {
-    public class Logs
+    public static class Logs
     {
         /// <summary>This method will create a log file if it doesn't exist and then it will write the log to the file.
         /// It can also be called manually to write a custom log to the log file</summary>
