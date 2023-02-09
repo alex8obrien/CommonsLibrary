@@ -4,7 +4,6 @@ using System.Linq;
 
 namespace CommonsLibrary
 {
-    /// <summary>This class provides methods for File IO operations</summary>
     public static class FileIO
     {
         /// <summary>Returns a string of the solution folder</summary>
@@ -33,11 +32,8 @@ namespace CommonsLibrary
         /// <exception cref="System.NotSupportedException">
         /// <paramref name="filePath" /> is in an invalid format.</exception>
         /// <exception cref="System.Security.SecurityException">The caller does not have the required permission.</exception>
-        public static int TotalLines(string filePath)
-        {
-            filePath = FilePath + filePath;
-            return File.ReadAllLines(filePath).Length;
-        }
+        public static int TotalLines(string filePath) =>
+            File.ReadAllLines(FilePath + filePath).Length;
 
         /// <summary>It returns a string of a specific line in a file from a 0 based index</summary>
         /// <param name="filePath">It's the path of the file from the solution folder including the file extension</param>
@@ -63,11 +59,8 @@ namespace CommonsLibrary
         /// <paramref name="filePath" /> is in an invalid format.</exception>
         /// <exception cref="System.Security.SecurityException">The caller does not have the required permission.</exception>
         /// <exception cref="System.IndexOutOfRangeException">The line you selected is not valid</exception>
-        public static string LineAt(string filePath, int lineNumber)
-        {
-            filePath = FilePath + filePath;
-            return File.ReadLines(filePath).ElementAt(lineNumber);
-        }
+        public static string LineAt(string filePath, int lineNumber) =>
+            File.ReadLines(FilePath + filePath).ElementAt(lineNumber);
 
         /// <summary>It returns an integer of all the characters in a file</summary>
         /// <param name="filePath">It's the path of the file from the solution folder including the file extension</param>
@@ -91,10 +84,7 @@ namespace CommonsLibrary
         /// <exception cref="System.NotSupportedException">
         /// <paramref name="filePath" /> is in an invalid format.</exception>
         /// <exception cref="System.Security.SecurityException">The caller does not have the required permission.</exception>
-        public static int TotalChars(string filePath)
-        {
-            filePath = FilePath + filePath;
-            return File.ReadAllLines(filePath).Sum(line => line.Length);
-        }
+        public static int TotalChars(string filePath) =>
+            File.ReadAllLines(FilePath + filePath).Sum(line => line.Length);
     }
 }
