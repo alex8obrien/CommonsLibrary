@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace CommonsLibrary
 {
+    /// <summary>This class contains frequently used math functions.</summary>
     public static class Maths
     {
         /// <summary>Checks if the number is prime or not.</summary>
