@@ -1,8 +1,8 @@
 ﻿using System;
-using System.ComponentModel;
 
 namespace CommonsLibrary
 {
+    /// <summary>This class can return input from the console.</summary>
     public static class StdInp
     {
         /// <summary>Used to retrieve a string input from the console.</summary>
