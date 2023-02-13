@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace CommonsLibrary.Logging
+﻿namespace CommonsLibrary.Logging
 {
     public class Log : LogBuilder
     {
