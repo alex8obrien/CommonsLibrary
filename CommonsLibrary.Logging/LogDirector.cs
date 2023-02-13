@@ -1,15 +1,10 @@
 ﻿namespace CommonsLibrary.Logging
 {
-    public static class LogDirector
+    class Director
     {
-        public static LogsAgent MakeLog(LogBuilder logBuilder, string exceptionType)
+        public void Construct(LogBuilder logBuilder)
         {
-            logBuilder.CreateNewLog();
-            logBuilder.SetDateTime();
-            logBuilder.SetLogType();
-            logBuilder.SetLogMessage(exceptionType);
-
-            return logBuilder.GetLog();
+            logBuilder.BuildLogMessage();
         }
     }
 }

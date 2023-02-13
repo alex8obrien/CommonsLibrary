@@ -2,21 +2,14 @@
 
 namespace CommonsLibrary.Logging
 {
-    public class Warning : LogBuilder
+    class Warning : LogBuilder
     {
-        public override void SetDateTime()
+        public Warning(string logMessage)
         {
-            LogsAgentObject.DateTime = DateTime.UtcNow;
+            log = new Logs("WRN", logMessage);
         }
 
-        public override void SetLogType()
-        {
-            LogsAgentObject.LogType = "WRN";
-        }
-
-        public override void SetLogMessage(string exceptionType)
-        {
-            LogsAgentObject.LogMessage = exceptionType;
-        }
+        public override void BuildLogMessage()
+        { }
     }
 }

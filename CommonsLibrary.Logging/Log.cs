@@ -2,22 +2,14 @@
 
 namespace CommonsLibrary.Logging
 {
-    // ReSharper disable once InconsistentNaming
     public class Log : LogBuilder
     {
-        public override void SetDateTime()
+        public Log(string logMessage)
         {
-            LogsAgentObject.DateTime = DateTime.UtcNow;
+            log = new Logs("LOG", logMessage);
         }
 
-        public override void SetLogType()
-        {
-            LogsAgentObject.LogType = "LOG";
-        }
-
-        public override void SetLogMessage(string exceptionType)
-        {
-            LogsAgentObject.LogMessage = exceptionType;
-        }
+        public override void BuildLogMessage()
+        { }
     }
 }

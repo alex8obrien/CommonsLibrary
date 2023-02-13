@@ -2,20 +2,11 @@
 {
     public abstract class LogBuilder
     {
-        protected LogsAgent LogsAgentObject;
+        protected Logs log;
 
-        public abstract void SetDateTime();
-        public abstract void SetLogType();
-        public abstract void SetLogMessage(string exceptionType);
+        public Logs Log => log;
 
-        public void CreateNewLog()
-        {
-            LogsAgentObject = new LogsAgent();
-        }
+        public abstract void BuildLogMessage();
 
-        public LogsAgent GetLog()
-        {
-            return LogsAgentObject;
-        }
     }
 }
