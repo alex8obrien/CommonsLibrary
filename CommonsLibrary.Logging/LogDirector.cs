@@ -1,6 +1,6 @@
 ﻿namespace CommonsLibrary.Logging
 {
-    class Director
+    public class Director
     {
         public void Construct(LogBuilder logBuilder)
         {
