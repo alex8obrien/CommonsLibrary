@@ -7,7 +7,7 @@ It Contains CommonsLibrary for general libraries and CommonsLibrary.Logging for 
 
 - [Standard Input](https://github.com/alex8obrien/CommonsLibrary/blob/master/CommonsLibrary/StdInp.cs)
 - [Standard Output](https://github.com/alex8obrien/CommonsLibrary/blob/master/CommonsLibrary/StdOut.cs)
-- [Logging Project](https://github.com/alex8obrien/CommonsLibrary/blob/master/CommonsLibrary/Logs.cs)
+- [Logging Project](https://github.com/alex8obrien/CommonsLibrary/tree/master/CommonsLibrary.Logging)
 - [File Input/Output](https://github.com/alex8obrien/CommonsLibrary/blob/master/CommonsLibrary/FileIO.cs)
 - [Maths](https://github.com/alex8obrien/CommonsLibrary/blob/master/CommonsLibrary/Maths.cs)
 
