@@ -5,6 +5,7 @@
         public void Construct(LogBuilder logBuilder)
         {
             logBuilder.BuildLogMessage();
+            logBuilder.BuildError();
         }
     }
 }

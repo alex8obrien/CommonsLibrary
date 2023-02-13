@@ -7,6 +7,6 @@
         public Logs Log => log;
 
         public abstract void BuildLogMessage();
-
+        public abstract void BuildError();
     }
 }

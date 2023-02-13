@@ -2,12 +2,15 @@
 {
     public class Log : LogBuilder
     {
-        public Log(string logMessage)
+        public Log(string error, string logMessage)
         {
-            log = new Logs("LOG", logMessage);
+            log = new Logs("LOG", error,  logMessage);
         }
 
         public override void BuildLogMessage()
+        { }
+
+        public override void BuildError()
         { }
     }
 }
