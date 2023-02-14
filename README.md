@@ -1,15 +1,12 @@
 # Commons Library
 
-This is my commons library for all of my personal C# projects.
-It Contains CommonsLibrary for general libraries and CommonsLibrary.Logging for C# logging.  
+This is my commons library for all of my personal C# projects.  
+It features both a Logger and a general collection of IO libraries and math functions.  
 
 ## Index
 
-- [Standard Input](https://github.com/alex8obrien/CommonsLibrary/blob/master/CommonsLibrary/StdInp.cs)
-- [Standard Output](https://github.com/alex8obrien/CommonsLibrary/blob/master/CommonsLibrary/StdOut.cs)
+- [Main CommonsLibrary](https://github.com/alex8obrien/CommonsLibrary/tree/master/CommonsLibrary)
 - [Logging Project](https://github.com/alex8obrien/CommonsLibrary/tree/master/CommonsLibrary.Logging)
-- [File Input/Output](https://github.com/alex8obrien/CommonsLibrary/blob/master/CommonsLibrary/FileIO.cs)
-- [Maths](https://github.com/alex8obrien/CommonsLibrary/blob/master/CommonsLibrary/Maths.cs)
 
 ## Contributors
 - [Alex O'Brien](https://github.com/alex8obrien)
