@@ -21,11 +21,6 @@ namespace CommonsLibrary.Logging
 
         public void WriteToFile(string path)
         {
-            Console.WriteLine($"DT: {_dt}");
-            Console.WriteLine($"Logs Type: {_logType}");
-            Console.WriteLine($"Logs Type: {_error}");
-            Console.WriteLine($"Logs Message: {_logMessage}");
-
             path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + @"\" + path;
             if (string.IsNullOrEmpty(path) || !File.Exists(path)) throw new ArgumentNullException(path, "Path is null, empty or incorrect");
 
