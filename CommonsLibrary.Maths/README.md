@@ -4,7 +4,9 @@ This is my C# maths for all of my personal C# projects.
 
 ## Index
 
-- [Blah](https://github.com/alex8obrien/CommonsLibrary/blob/master/CommonsLibrary.Maths/)
+- [Converts](https://github.com/alex8obrien/CommonsLibrary/blob/master/CommonsLibrary.Maths/Converts.cs)
+- [Constants](https://github.com/alex8obrien/CommonsLibrary/blob/master/CommonsLibrary.Maths/Constants.cs)
+- [Sequences](https://github.com/alex8obrien/CommonsLibrary/blob/master/CommonsLibrary.Maths/Sequences.cs)
 
 ## My Other C# Libraries
 
