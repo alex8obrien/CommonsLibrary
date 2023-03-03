@@ -6,6 +6,7 @@ It features both a Logger and a general collection of IO libraries and math func
 ## Index
 
 - [Main CommonsLibrary](https://github.com/alex8obrien/CommonsLibrary/tree/master/CommonsLibrary)
+- [Maths](https://github.com/alex8obrien/CommonsLibrary/tree/master/CommonsLibrary.Maths)
 - [Logging Project](https://github.com/alex8obrien/CommonsLibrary/tree/master/CommonsLibrary.Logging)
 
 ## Contributors
