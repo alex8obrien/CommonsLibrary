@@ -14,6 +14,7 @@ This is my C# logging library for all of my personal C# projects.
 ## My Other C# Libraries
 
 - [Main Commons Library](https://github.com/alex8obrien/CommonsLibrary/tree/master/CommonsLibrary)
+- [Maths Library](https://github.com/alex8obrien/CommonsLibrary/tree/master/CommonsLibrary.Maths)
 
 ## Contributors
 - [Alex O'Brien](https://github.com/alex8obrien)
