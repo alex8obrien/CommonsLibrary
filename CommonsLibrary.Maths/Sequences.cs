@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace CommonsLibrary.Maths
 {
@@ -35,9 +36,14 @@ namespace CommonsLibrary.Maths
             return NotImplementedException;
         }
 
-        public static int[] PrimeNumbers(int count)
+        public static int[] PrimeNumbers(int lowBoundary, int highBoundary)
         {
-            return NotImplementedException;
+            List<int> list = new();
+            for (int i = lowBoundary; i < highBoundary; i++)
+            {
+                if (Maths.IsPrime(i)) list.Add(i);
+            }
+            return list.ToArray();
         }
     }
 }
