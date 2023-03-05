@@ -8,8 +8,8 @@ namespace CommonsLibrary.Maths
         public static int NthFibonacciValue(int index)
         {
             if (index == 0) return 0;
-
             int prev = 0, next = 1;
+
             for (int i = 1; i < index; i++)
             {
                 int sum = prev + next;
@@ -33,7 +33,22 @@ namespace CommonsLibrary.Maths
 
         public static int NthPrimeNumber(int index)
         {
-            return NotImplementedException;
+            int count = 0;
+            int value = 0;
+            int increment = 0;
+
+            while (count != index)
+            {
+                if (Maths.IsPrime(increment))
+                {
+                    value = increment;
+                    count++;
+                    increment++;
+                }
+                else increment++;
+            }
+
+            return value;
         }
 
         public static int[] PrimeNumbers(int lowBoundary, int highBoundary)
