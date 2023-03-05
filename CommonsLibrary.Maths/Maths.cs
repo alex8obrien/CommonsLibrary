@@ -2,7 +2,7 @@
 
 namespace CommonsLibrary.Maths
 {
-    /// <summary>The genera maths library</summary>
+    /// <summary>The general maths library</summary>
     public static class Maths
     {
         /// <summary>Checks if the number is prime or not.</summary>
