@@ -3,6 +3,7 @@
 namespace CommonsLibrary
 {
     /// <summary>This class can return input from the console.</summary>
+    /// <remarks>Requires the 'System.Console' package.</remarks>
     public static class StdInp
     {
         /// <summary>Used to retrieve a string input from the console.</summary>
