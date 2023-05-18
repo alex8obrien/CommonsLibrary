@@ -14,6 +14,7 @@ This is my commons library for all of my personal C# projects.
 - [Maths library](https://github.com/alex8obrien/CommonsLibrary/tree/master/CommonsLibrary.Maths)
 
 ## Contributors
+
 - [Alex O'Brien](https://github.com/alex8obrien)
 
 ### *Licensed under the MIT License, Find it [here](https://github.com/alex8obrien/CommonsLibrary/blob/master/LICENSE.md)*
