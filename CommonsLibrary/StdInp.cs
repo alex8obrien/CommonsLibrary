@@ -68,5 +68,12 @@ namespace CommonsLibrary
 
             return inp is "Y" or "YES";
         }
+
+        public static string[] InputDelimitedArray(string msg, string delimiter)
+        {
+            string input = Input(msg);
+            string[] array = input.Split(delimiter);
+            return array;
+        }
     }
 }
