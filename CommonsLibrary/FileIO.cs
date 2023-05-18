@@ -85,5 +85,30 @@ namespace CommonsLibrary
         /// <exception cref="System.Security.SecurityException">The caller does not have the required permission.</exception>
         public static int TotalChars(string filePath) =>
             File.ReadAllLines(FilePath + filePath).Sum(line => line.Length);
+
+        /// <summary>This method will write a set of data to a file using delimiters</summary>
+        /// <param name="data">The data to be written to the file</param>
+        /// <param name="delimiter">A delimiter used to separate data in the file.</param>
+        /// <param name="path">The path of the CSV file.</param>
+        public static void SaveCSV(string[,] data, string delimiter, string path)
+        {
+            if (!File.Exists(path))
+                throw new FileNotFoundException();
+
+            using (StreamWriter writer = new(path))
+            {
+                for (int i = 0; i < data.GetLength(0); i++)
+                {
+                    for (int j = 0; j < data.GetLength(1); j++)
+                    {
+                        writer.Write(data[i, j]);
+
+                        if (j != data.GetLength(1) - 1)
+                            writer.Write(delimiter);
+                    }
+                    writer.WriteLine();
+                }
+            }
+        }
     }
 }
