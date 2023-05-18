@@ -3,6 +3,7 @@ using System;
 namespace CommonsLibrary
 {
     /// <summary>Contains methods for standard output data.</summary>
+    /// <remarks>It requires the use of the 'System.Console' package.</remarks>
     public static class StdOut
     {
         /// <summary>Used to write messages to the console in colour without a new line</summary>
