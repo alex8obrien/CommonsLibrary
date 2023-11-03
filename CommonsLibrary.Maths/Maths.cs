@@ -13,13 +13,12 @@ namespace CommonsLibrary.Maths
         /// <paramref name="number" /> is <see langword="null" />.</exception>
         public static bool IsPrime(int number)
         {
-            switch (number)
-            {
-                case <= 1:
-                    return false;
-                case 2 or 3 or 5:
-                    return true;
-            }
+   
+            if (number <= 1)
+                return false;
+
+            if (number == 2 || number == 3 || number == 5)
+                return true;
 
             if (number % 2 == 0 || number % 3 == 0 || number % 5 == 0) return false;
 
@@ -34,5 +33,7 @@ namespace CommonsLibrary.Maths
 
             return true;
         }
+
+
     }
 }
