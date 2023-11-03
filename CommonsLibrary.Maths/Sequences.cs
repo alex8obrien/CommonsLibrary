@@ -66,7 +66,7 @@ namespace CommonsLibrary.Maths
         /// <returns>An array of prime integers between the bounds.</returns>
         public static int[] PrimeNumbers(int lowBoundary, int highBoundary)
         {
-            List<int> list = new();
+            List<int> list = new List<int>();
             for (int i = lowBoundary; i < highBoundary; i++)
             {
                 if (Maths.IsPrime(i)) list.Add(i);

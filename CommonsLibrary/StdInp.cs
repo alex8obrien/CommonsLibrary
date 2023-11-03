@@ -66,14 +66,14 @@ namespace CommonsLibrary
                 inp = Input($"{msg} (y/n)").ToUpper();
             } while (inp != "Y" && inp != "N" && inp != "YES" && inp != "NO");
 
-            return inp is "Y" or "YES";
+            return inp == "Y" || inp == "YES";
         }
 
         /// <summary>Converts user input to a delimited string array.</summary>
         /// <param name="msg">The input message displayed to the user.</param>
         /// <param name="delimiter">The delimiter used to separate the string.</param>
         /// <returns>A string array created from user input.</returns>
-        public static string[] InputDelimitedArray(string msg, string delimiter)
+        public static string[] InputDelimitedArray(string msg, char delimiter)
         {
             string input = Input(msg);
             string[] array = input.Split(delimiter);

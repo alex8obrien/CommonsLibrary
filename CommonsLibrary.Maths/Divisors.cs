@@ -33,7 +33,7 @@ namespace CommonsLibrary.Maths
         /// <paramref name="number" /> is <see langword="null" />.</exception>
         public static int[] GetPrimeFactors(int number)
         {
-            List<int> factors = new();
+            List<int> factors = new List<int>();
             if (number < 0) number = -number;
 
             while (number % 2 == 0)
