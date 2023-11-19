@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 
 namespace CommonsLibrary
 {
@@ -78,6 +79,40 @@ namespace CommonsLibrary
             string input = Input(msg);
             string[] array = input.Split(delimiter);
             return array;
+        }
+
+        /// <summary>Gets formatted DateTime from the Console</summary>
+        /// <param name="msg">The message displayed to the user</param>
+        /// <param name="pattern">The DateTime pattern shown to the user</param>
+        /// <param name="culture">The culture-specific information for the DateTime</param>
+        /// <returns>A DateTime object representing the string inputted DateTime</returns>
+        public static DateTime GetDateTime(string msg, string pattern, CultureInfo culture)
+        {
+            bool valid;
+            DateTime result;
+
+            do
+            {
+                string input = Input($"{msg} ({pattern})");
+                valid = DateTime.TryParseExact(input, pattern, culture, DateTimeStyles.AllowWhiteSpaces, out result);
+
+                if (!valid)
+                    Console.WriteLine("Invalid date/time format.");
+
+            } while (!valid);
+
+            return result;
+        }
+
+        /// <summary>Gets user inputted DateTime and converts it to a unix timestamp</summary>
+        /// <param name="msg">The message displayed to the user</param>
+        /// <param name="pattern">The DateTime pattern shown to the user</param>
+        /// <param name="culture">The culture-specific information for the DateTime</param>
+        /// <returns>A unix timestamp representing the inputted DateTime</returns>
+        public static long GetUnixDateTime(string msg, string pattern, CultureInfo culture)
+        {
+            DateTime dt = GetDateTime(msg, pattern, culture);
+            return ((DateTimeOffset)dt).ToUnixTimeSeconds();
         }
     }
 }
