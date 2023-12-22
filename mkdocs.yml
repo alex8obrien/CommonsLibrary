@@ -60,6 +60,7 @@ theme:
 plugins:
   - git-revision-date-localized:
       enable_creation_date: true
+  - search
 
 # Additional configuration
 
@@ -144,4 +145,9 @@ extra_javascript:
 nav:
   - Home:
     - index.md
-    - test.md
+  - Core Library:
+    - CommonsLibrary/index.md
+  - Maths:
+    - Maths/index.md
+  - Logging:
+    - Logging/index.md
