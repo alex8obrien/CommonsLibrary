@@ -141,5 +141,32 @@ namespace CommonsLibrary
 
             return maxWidth;
         }
+
+        /// <summary>
+        /// Creates the row as a StringBuilder instance
+        /// </summary>
+        /// <param name="row">Row of data to use in the table</param>
+        /// <param name="maxWidth">Maximum width of each column in the table</param>
+        /// <returns>StringBuilder instance of the row in the table</returns>
+        private static StringBuilder AddNewLine(IReadOnlyList<string> row, IReadOnlyList<int> maxWidth)
+        {
+            StringBuilder builder = new StringBuilder();
+
+            for (int i = 0; i < row.Count; i++)
+            {
+                builder.Append($"| {row[i]} ");
+
+                int difference = maxWidth[i] - row[i].Length;
+
+                for (int j = 0; j < difference; j++)
+                {
+                    builder.Append(' ');
+                }
+            }
+
+            builder.AppendLine("|");
+
+            return builder;
+        }
     }
 }
