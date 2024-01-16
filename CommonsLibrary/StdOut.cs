@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.Text;
 
 namespace CommonsLibrary
 {
@@ -89,6 +91,29 @@ namespace CommonsLibrary
 
                 Console.WriteLine("");
             }
+        }
+
+        /// <summary>
+        /// Method used to create the lines for the table
+        /// </summary>
+        /// <param name="maxWidths">Max width of each column</param>
+        /// <returns>A StringBuilder that contains the line to separate the headers and data</returns>
+        private static StringBuilder CreateRule(IEnumerable<int> maxWidths)
+        {
+            StringBuilder builder = new StringBuilder();
+
+            foreach (int maxWidth in maxWidths)
+            {
+                builder.Append("|-");
+                for (int i = 0; i < maxWidth; i++)
+                {
+                    builder.Append('-');
+                }
+                builder.Append('-');
+            }
+
+            builder.AppendLine("|");
+            return builder;
         }
     }
 }
