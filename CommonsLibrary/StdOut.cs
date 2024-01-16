@@ -24,73 +24,31 @@ namespace CommonsLibrary
         public static void WriteLineColourMessage(string msg, ConsoleColor colour) =>
             WriteColourMessage($"{msg}\n", colour);
 
-        /// <summary>Used to build and display data</summary>
+        /// <summary>Used to generate an ASCII table</summary>
         /// <param name="headers">An array of the headers</param>
         /// <param name="data">A 2D array of the data you want displaying</param>
-        public static void PrintTable(string[] headers, string[,] data)
+        public static string GenerateTable(string[] headers, string[,] data)
         {
-            int[] maxColumnWidth = new int[headers.Length];
+            int[] maxColumnWidth = GetMaxColumnWidth(headers, data);
 
-            // Find max column width
-            for (int i = 0; i < headers.Length; i++)
-            {
-                maxColumnWidth[i] = headers[i].Length;
-            }
+            StringBuilder builder = new StringBuilder();
+            builder.Append(AddNewLine(headers, maxColumnWidth));
+            builder.Append(CreateRule(maxColumnWidth));
 
             for (int i = 0; i < data.GetLength(0); i++)
             {
+
+                string[] row = new string[data.GetLength(1)];
+
                 for (int j = 0; j < data.GetLength(1); j++)
                 {
-                    if (data[i, j].Length > maxColumnWidth[j])
-                    {
-                        maxColumnWidth[j] = data[i, j].Length;
-                    }
-                }
-            }
-
-            foreach (string header in headers)
-            {
-                Console.Write($"| {header} ");
-                int diff = maxColumnWidth[Array.IndexOf(headers, header)] - header.Length;
-                for (int i = 0; i < diff; i++)
-                {
-                    Console.Write(" ");
-                }
-            }
-
-            Console.WriteLine("|");
-
-            for (int i = 0; i < headers.Length; i++)
-            {
-                Console.Write("|-");
-                for (int j = 0; j < maxColumnWidth[i]; j++)
-                {
-                    Console.Write("-");
+                    row[j] = data[i, j];
                 }
 
-                Console.Write("-");
+                builder.Append(AddNewLine(row, maxColumnWidth));
             }
 
-            Console.WriteLine("|");
-
-            for (int i = 0; i < data.GetLength(0); i++)
-            {
-                Console.Write("|");
-                for (int j = 0; j < data.GetLength(1); j++)
-                {
-                    Console.Write($" {data[i, j]}");
-
-                    int diff = maxColumnWidth[j] - data[i, j].Length;
-                    for (int k = 0; k < diff; k++)
-                    {
-                        Console.Write(" ");
-                    }
-
-                    Console.Write(" |");
-                }
-
-                Console.WriteLine("");
-            }
+            return builder.ToString();
         }
 
         /// <summary>
