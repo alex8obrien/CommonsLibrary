@@ -115,5 +115,31 @@ namespace CommonsLibrary
             builder.AppendLine("|");
             return builder;
         }
+
+        /// <summary>
+        /// Gets the maximum column width for the headers and data
+        /// </summary>
+        /// <param name="headers">Table headers</param>
+        /// <param name="data">Table data</param>
+        /// <returns>Int array of the maximum width</returns>
+        private static int[] GetMaxColumnWidth(IReadOnlyList<string> headers, string[,] data)
+        {
+            int[] maxWidth = new int[headers.Count];
+
+            // Initialize maxWidth with header widths directly
+            for (int i = 0; i < maxWidth.Length; i++)
+                maxWidth[i] = headers[i].Length;
+
+            // Loop through data and find a new max width
+            for (int i = 0; i < data.GetLength(0); i++)
+            {
+                for (int j = 0; j < data.GetLength(1); j++)
+                {
+                    maxWidth[j] = Math.Max(maxWidth[j], data[i, j].Length);
+                }
+            }
+
+            return maxWidth;
+        }
     }
 }
