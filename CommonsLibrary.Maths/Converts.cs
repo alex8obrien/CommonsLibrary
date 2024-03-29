@@ -4,7 +4,6 @@ namespace CommonsLibrary.Maths
 {
     public static class Converts
     {
-        
         public static string UBinToOct(string input) => Convert.ToString(Convert.ToInt32(input, 2), 8);
         public static int UBinToDec(string input) => Convert.ToInt32(input, 2);
         public static string UBinToHex(string input) => Convert.ToInt32(input, 2).ToString("X");

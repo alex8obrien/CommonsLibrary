@@ -2,6 +2,9 @@
 
 namespace CommonsLibrary.Maths
 {
+    /// <summary>
+    /// Collection of mathematical constants
+    /// </summary>
     public static class Constants
     {
         public const decimal E = 2.71828182845904523536028747135266249775724709369995957496696762772407663035354759457138217852516642742746m;

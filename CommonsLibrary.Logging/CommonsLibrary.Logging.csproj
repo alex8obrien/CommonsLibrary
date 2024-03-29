@@ -18,6 +18,7 @@
     <RepositoryType>git</RepositoryType>
     <PackageTags>lib;library;c#;logging;logs</PackageTags>
     <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>

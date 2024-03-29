@@ -3,6 +3,8 @@ using System.Linq;
 
 namespace CommonsLibrary
 {
+    /// <summary>Static class containing useful file methods.</summary>
+    /// <remarks>Requires the 'System.IO' package.</remarks>
     public static class FileIO
     {
         /// <summary>Calculates the number of lines in a file.</summary>
