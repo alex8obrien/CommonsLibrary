@@ -22,7 +22,7 @@ jobs:
         run: dotnet build --configuration Release
       - name: Create the package
         run: dotnet pack --configuration Release
-      - name: Publish the package to GPR
+      - name: Publish the package to NuGet
         run: dotnet nuget push */bin/Release/*.nupkg -k ${{ secrets.NUGET_KEY}} -s https://api.nuget.org/v3/index.json --skip-duplicate
       - name: Publish the package to GPR
         run: dotnet nuget push */bin/Release/*.nupkg -k ${{ secrets.GPR_KEY }} -s https://nuget.pkg.github.com/alex8obrien/index.json --skip-duplicate
